@@ -9,7 +9,7 @@ const Form = ({ onSubmit }) => {
   return (
     <form className="container" onSubmit={handleSubmit(onSubmit)}>
       <input ref={register} name="title" placeholder="Título" />
-      <input ref={register} placeholder="Descrição" />
+      <input ref={register} name="description" placeholder="Descrição" />
       <div className="m-top-25">
         <button type="submit" className="info">
           Criar

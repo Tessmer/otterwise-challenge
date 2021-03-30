@@ -12,7 +12,7 @@ const CreatePost = () => {
 
   const onSubmit = async (data) => {
     try {
-      await createPost(Data);
+      await createPost(data);
       toast.success("Post criado com sucesso!!");
       history.push("/");
     } catch {
@@ -23,7 +23,7 @@ const CreatePost = () => {
   return (
     <div className="container">
       <h1>Criar uma nova publicação</h1>
-      <Form />
+      <Form onSubmit={onSubmit} />
     </div>
   );
 };

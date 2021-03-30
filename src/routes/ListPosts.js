@@ -7,7 +7,7 @@ import "../styles/style.css";
 
 const ListPosts = () => {
   const [post, setPosts] = useState([]);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleDelete = async (id) => {
@@ -50,7 +50,7 @@ const ListPosts = () => {
               <button className="info">Editar Post</button>
               <button
                 className="error"
-                onClick={() => handleOpenModalDelete(item)}
+                onClick={(item) => handleOpenModalDelete(item)}
               >
                 Excluir Post
               </button>
@@ -72,10 +72,11 @@ const ListPosts = () => {
             >
               Excluir
             </button>
-            <button className="cancel">cancelar</button>
+            <button className="cancel" onClick={() => setOpen(false)}>cancelar</button>
           </div>
         </div>
-      )}
+      )
+      }
     </>
   );
 };

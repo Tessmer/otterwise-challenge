@@ -2,7 +2,7 @@ import client from "axios";
 
 const api = "https://jsonplaceholder.typicode.com";
 
-export const getPostsList = () => client.get(api + "/p0sts");
+export const getPostsList = () => client.get(api + "/posts");
 
 export const createPost = () => client.post(api + "/posts");
 
